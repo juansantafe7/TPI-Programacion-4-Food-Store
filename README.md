@@ -3,11 +3,12 @@
 Trabajo Práctico Integrador de Programación 4 · UTN  
 **Alumno:** Juan Cruz Leal
 
-Food Store permite consultar el catálogo, armar un carrito y hacer pedidos con entrega a domicilio. El administrador maneja el catálogo, el stock, las cuentas y el estado de los pedidos. El cliente elige efectivo o transferencia al confirmar el pedido.
+Desarrollé Food Store para consultar el catálogo, armar un carrito y hacer pedidos con entrega a domicilio. El administrador maneja el catálogo, el stock, las cuentas y el estado de los pedidos. El cliente elige efectivo o transferencia al confirmar el pedido.
 
-## Video
+## Repositorio y video
 
-- Video público de demostración: https://drive.google.com/drive/folders/1ZLiXx2gQLRg3uO0AB7bVXFzu5vP8Kgnl
+- [Repositorio público del proyecto en GitHub](https://github.com/juansantafe7/TPI-Programacion-4-Food-Store)
+- [Video de demostración en Google Drive](https://drive.google.com/file/d/1JXFcaQtCXZpum7oVRBL6jfOTF4xRnpfX/view)
 
 ## Requisitos
 
@@ -47,7 +48,7 @@ uvicorn app.main:app --reload
 - Swagger en <http://localhost:8000/docs>
 - ReDoc en <http://localhost:8000/redoc>
 
-El seed crea el administrador **`admin` / `Admin1234!`**, tres categorías y ocho productos con stock. Se puede ejecutar de nuevo sin duplicar los registros ni sobrescribir su stock.
+El seed crea el administrador **`admin` / `Admin1234!`**, tres categorías y ocho productos con stock e imágenes. Se puede ejecutar de nuevo sin duplicar los registros ni sobrescribir su stock. Para probar la compra como cliente, creá una cuenta desde **Registrarme**.
 
 | Variable | Uso |
 | --- | --- |
@@ -95,6 +96,8 @@ El frontend usa TanStack Query para consultar la API y actualizar el catálogo, 
 
 ## Validación
 
+Probé el registro, la sesión, el recorrido de compra y las operaciones del administrador. En los pedidos comprobé el descuento de stock, la devolución al cancelar y el rechazo de operaciones que no corresponden al estado o al usuario.
+
 | Caso | Comprobación |
 | --- | --- |
 | Registro y sesión | Registro con rol cliente, duplicado rechazado, inicio de sesión, cookie HttpOnly, recarga y cierre de sesión. |
@@ -102,3 +105,5 @@ El frontend usa TanStack Query para consultar la API y actualizar el catálogo, 
 | Reglas de pedido | Rechazo si hay productos repetidos, stock insuficiente, datos inválidos o una transición prohibida. Un pedido ajeno queda fuera del listado del cliente. |
 | Cancelación | El pedido pasa a cancelado y se restituye el stock. Una segunda cancelación se rechaza. |
 | Administración | CRUD de categorías y productos, cambio de stock y disponibilidad, gestión de usuarios, estados e ingresos de entregas. |
+
+En el video muestro el registro y la compra con una cuenta de cliente. Después cancelo el primer pedido y verifico que la pizza napolitana vuelve de 12 a 14 unidades. Con el segundo pedido muestro el cambio a preparación y entrega, el resumen, la gestión de usuarios y la edición de una categoría.
