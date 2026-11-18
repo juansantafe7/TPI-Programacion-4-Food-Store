@@ -25,7 +25,7 @@ En pgAdmin, abrí Query Tool conectado a la base `postgres` y ejecutá una vez:
 CREATE DATABASE foodstore_db;
 ```
 
-Usá una base nueva para el TPI porque el modelo de las unidades anteriores tiene otras tablas y columnas. Desde Git Bash en Windows, ubicado en la carpeta que contiene este README:
+Desde Git Bash en Windows, ubicado en la carpeta que contiene este README:
 
 ```bash
 cd backend
