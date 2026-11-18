@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body { @apply m-0 bg-[#f8f6f1] text-[#27261a] antialiased; }
+  button:not(:disabled) { @apply cursor-pointer; }
+  button:disabled { @apply cursor-not-allowed opacity-50; }
+}
+
+@layer components {
+  .btn-secondary { @apply inline-flex items-center justify-center rounded-xl border border-[#d7d3c4] bg-white px-3 py-2 text-sm font-semibold text-[#3b3e28] transition hover:border-[#6a7247] hover:bg-[#f4f5eb] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#526138]; }
+  .field { @apply w-full rounded-xl border border-[#d7d3c4] bg-white px-3 py-2.5 text-sm text-[#27261a] outline-none focus:border-[#627046] focus:ring-2 focus:ring-[#ced7bb]; }
+  .label { @apply grid gap-1.5 text-sm font-medium text-[#474536]; }
+}
