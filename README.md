@@ -5,10 +5,9 @@ Trabajo Práctico Integrador de Programación 4 · UTN
 
 Food Store permite consultar el catálogo, armar un carrito y hacer pedidos con entrega a domicilio. El administrador maneja el catálogo, el stock, las cuentas y el estado de los pedidos. El cliente elige efectivo o transferencia al confirmar el pedido.
 
-## Repositorio y video
+## Video
 
-- Repositorio público de GitHub: pendiente de agregar la URL.
-- Video público de demostración: pendiente de agregar la URL.
+- Video público de demostración: https://drive.google.com/drive/folders/1ZLiXx2gQLRg3uO0AB7bVXFzu5vP8Kgnl
 
 ## Requisitos
 
